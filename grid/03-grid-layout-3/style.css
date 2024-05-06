@@ -5,6 +5,11 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 6fr 1fr;
+  gap: 5px;
+
 }
 
 .container div {
@@ -17,6 +22,17 @@
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  list-style: none;
 }
 
 .menu ul,
@@ -26,6 +42,14 @@
 
 .sidebar {
   background-color: #C50208;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .sidebar .photo {
@@ -48,13 +72,26 @@
   background-color: #C50208;
 }
 
+.nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .article {
   background-color: #bccbde;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
 }
 
 .article p {
@@ -83,6 +120,8 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .footer p {
